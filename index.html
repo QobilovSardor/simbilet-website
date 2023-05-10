@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap5/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="screen">
+	<link rel="stylesheet icon" type="text/css" href="css/style.css" media="screen">
+	<link href="css/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>SimBilet</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header-inner  w-100 d-flex align-items-center justify-content-between">
+					<div class="header-logo">
+						<a href="#" class="white-mode">
+							<svg width="230" height="28" viewBox="0 0 230 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_1_121)">
+									<path
+										d="M26.4742 18.4197C26.4748 20.9254 25.4972 23.3315 23.7512 25.1219C22.0052 26.9123 19.6298 27.9442 17.1348 27.9964H2.65456V24.5927H10.2494C10.2435 24.579 10.2369 24.5657 10.2295 24.5528H12.3199V19.2337H8.78683C6.33315 19.0517 4.04547 17.9211 2.4053 16.0797C0.76513 14.2384 -0.0996118 11.83 -0.00692091 9.36144C0.08577 6.89288 1.12866 4.55669 2.90226 2.84458C4.67586 1.13247 7.04183 0.17797 9.5022 0.181977H9.67309V0.166016H25.2104V3.57174H17.1328V8.84494H17.2878C19.7557 8.93637 22.092 9.9853 23.8054 11.771C25.5187 13.5568 26.4754 15.9401 26.4742 18.4197Z"
+										fill="#439799" />
+									<path
+										d="M119.824 20.2109C119.824 18.7475 119.406 17.3148 118.619 16.0827C117.833 14.8506 116.711 13.8709 115.387 13.2598C116.664 12.5068 117.675 11.3707 118.277 10.0113C118.878 8.65186 119.041 7.13731 118.741 5.68044C118.441 4.22357 117.695 2.89757 116.606 1.88874C115.517 0.879911 114.14 0.238936 112.67 0.0558643V0.0299273H112.416C112.217 0.0119709 112 0 111.788 0C111.575 0 111.369 0.0119709 111.162 0.0299273H95.8232V27.8603H112.67V27.8444C114.606 27.7255 116.424 26.8696 117.754 25.4511C119.083 24.0327 119.823 22.1586 119.824 20.2109Z"
+										fill="#272727" />
+									<path
+										d="M148.455 3.56975V0.166016H121.998V3.56975H126.803V24.5927H121.998V27.9964H148.455V24.5927H143.65V3.56975H148.455Z"
+										fill="#272727" />
+									<path
+										d="M53.7975 3.56975V0.166016H27.3389V3.56975H32.1457V24.5927H27.3389V27.9964H53.7975V24.5927H48.9906V3.56975H53.7975Z"
+										fill="#439799" />
+									<path
+										d="M201.038 24.6525C199.916 24.6525 198.841 24.2052 198.048 23.4089C197.255 22.6127 196.809 21.5328 196.809 20.4068C196.809 19.2807 197.255 18.2008 198.048 17.4046C198.841 16.6084 199.916 16.1611 201.038 16.1611C201.171 16.1611 201.304 16.1611 201.435 16.181V13.1464C201.303 13.1607 201.17 13.1681 201.038 13.1684C199.932 13.1443 198.879 12.6863 198.106 11.8925C197.332 11.0987 196.899 10.0323 196.899 8.92167C196.899 7.81105 197.332 6.74461 198.106 5.95083C198.879 5.15704 199.932 4.69905 201.038 4.67498C201.171 4.67498 201.304 4.67498 201.435 4.69493V0.169922H179.775V28.0003H201.435V24.6325C201.296 24.6445 201.171 24.6525 201.038 24.6525Z"
+										fill="#272727" />
+									<path d="M169.577 24.5946V0.169922H152.73V24.5946V25.263V28.0003H178.273V24.5946H169.577Z"
+										fill="#272727" />
+									<path d="M230 0.169922H203.299V4.33181H208.227V28.0003H225.074V4.33181H230V0.169922Z"
+										fill="#272727" />
+									<path
+										d="M82.9866 0.0244141C82.8603 2.48948 81.7962 4.81175 80.0138 6.5118C78.2315 8.21186 75.8671 9.15991 73.4087 9.16023C70.9505 9.15988 68.5863 8.21177 66.8043 6.51167C65.0223 4.81156 63.9585 2.4893 63.8327 0.0244141H57.5713V27.7571H67.1294V20.1755H68.6157V27.7571H78.2016V20.1755H79.684V27.7571H89.2441V0.0244141H82.9866Z"
+										fill="#439799" />
+								</g>
+								<defs>
+									<clipPath id="clip0_1_121">
+										<rect width="230" height="28" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a href="#!" class="dark-mode">
+							<svg width="230" height="28" viewBox="0 0 230 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_1_5049)">
+									<path
+										d="M26.4742 18.4197C26.4748 20.9254 25.4972 23.3315 23.7512 25.1219C22.0052 26.9123 19.6298 27.9442 17.1348 27.9964H2.65456V24.5927H10.2494C10.2435 24.579 10.2369 24.5657 10.2295 24.5528H12.3199V19.2337H8.78683C6.33315 19.0517 4.04547 17.9211 2.4053 16.0797C0.76513 14.2384 -0.0996118 11.83 -0.00692091 9.36144C0.08577 6.89288 1.12866 4.55669 2.90226 2.84458C4.67586 1.13247 7.04183 0.17797 9.5022 0.181977H9.67309V0.166016H25.2104V3.57174H17.1328V8.84494H17.2878C19.7557 8.93637 22.092 9.9853 23.8054 11.771C25.5187 13.5568 26.4754 15.9401 26.4742 18.4197Z"
+										fill="#439799" />
+									<path
+										d="M119.824 20.2109C119.824 18.7475 119.406 17.3148 118.619 16.0827C117.833 14.8506 116.711 13.8709 115.387 13.2598C116.664 12.5068 117.675 11.3707 118.277 10.0113C118.878 8.65186 119.041 7.13731 118.741 5.68044C118.441 4.22357 117.695 2.89757 116.606 1.88874C115.517 0.879911 114.14 0.238936 112.67 0.0558643V0.0299273H112.416C112.217 0.0119709 112 0 111.788 0C111.575 0 111.369 0.0119709 111.162 0.0299273H95.8232V27.8603H112.67V27.8444C114.606 27.7255 116.424 26.8696 117.754 25.4511C119.083 24.0327 119.823 22.1586 119.824 20.2109Z"
+										fill="white" />
+									<path
+										d="M148.455 3.56975V0.166016H121.998V3.56975H126.803V24.5927H121.998V27.9964H148.455V24.5927H143.65V3.56975H148.455Z"
+										fill="white" />
+									<path
+										d="M53.7975 3.56975V0.166016H27.3389V3.56975H32.1457V24.5927H27.3389V27.9964H53.7975V24.5927H48.9906V3.56975H53.7975Z"
+										fill="#439799" />
+									<path
+										d="M201.038 24.6525C199.916 24.6525 198.841 24.2052 198.048 23.4089C197.255 22.6127 196.809 21.5328 196.809 20.4068C196.809 19.2807 197.255 18.2008 198.048 17.4046C198.841 16.6084 199.916 16.1611 201.038 16.1611C201.171 16.1611 201.304 16.1611 201.435 16.181V13.1464C201.303 13.1607 201.17 13.1681 201.038 13.1684C199.932 13.1443 198.879 12.6863 198.106 11.8925C197.332 11.0987 196.899 10.0323 196.899 8.92167C196.899 7.81105 197.332 6.74461 198.106 5.95083C198.879 5.15704 199.932 4.69905 201.038 4.67498C201.171 4.67498 201.304 4.67498 201.435 4.69493V0.169922H179.775V28.0003H201.435V24.6325C201.296 24.6445 201.171 24.6525 201.038 24.6525Z"
+										fill="white" />
+									<path d="M169.577 24.5946V0.169922H152.73V24.5946V25.263V28.0003H178.273V24.5946H169.577Z"
+										fill="white" />
+									<path d="M230 0.169922H203.299V4.33181H208.227V28.0003H225.074V4.33181H230V0.169922Z" fill="white" />
+									<path
+										d="M82.9866 0.0244141C82.8603 2.48948 81.7962 4.81175 80.0138 6.5118C78.2315 8.21186 75.8671 9.15991 73.4087 9.16023C70.9505 9.15988 68.5863 8.21177 66.8043 6.51167C65.0223 4.81156 63.9585 2.4893 63.8327 0.0244141H57.5713V27.7571H67.1294V20.1755H68.6157V27.7571H78.2016V20.1755H79.684V27.7571H89.2441V0.0244141H82.9866Z"
+										fill="#439799" />
+								</g>
+								<defs>
+									<clipPath id="clip0_1_5049">
+										<rect width="230" height="28" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+
+					<div class="header-search d-flex align-items-center">
+						<div class="header-search__box pc">
+							<div class="header-search__box-icon">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="7" cy="7" r="5.5" stroke="#272727" stroke-opacity="0.8" />
+									<path d="M15 15L11 11" stroke="#272727" stroke-opacity="0.8" stroke-linecap="round" />
+								</svg>
+							</div>
+							<input type="text" placeholder="Поиск билетов">
+						</div>
+					</div>
+
+					<div class="header-nav">
+						<div class="header-buttons mob">
+							<div class="header-buttons__box d-flex align-items-center">
+								<!-- <button >
+											
+										</button> -->
+								<label class="header-btn d-flex align-items-center justify-content-center">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="1.5" y="1.5" width="13" height="13" rx="1.5" stroke="#272727" />
+										<line x1="4.5" y1="2.5" x2="4.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+										<line x1="11.5" y1="4.5" x2="4.5" y2="4.5" stroke="#272727" stroke-linecap="round" />
+										<line x1="11.5" y1="2.5" x2="11.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+									</svg>
+									<input class="header-date" type="text" name="daterange" value="" placeholder="Выбор даты" />
+								</label>
+
+								<button class="header-btn d-flex align-items-center justify-content-center">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 7C14 4 12 1 8 1C4 1 1.99997 4 2 7C2.00004 10.9052 7.5 15 8 15C8.5 15 14 10.9052 14 7Z"
+											stroke="#272727" stroke-linejoin="round" />
+										<circle cx="8" cy="7" r="1" fill="#272727" />
+									</svg>
+									<span>Москва</span>
+								</button>
+								<button class="white-mode click-mode">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2.25L12 3.75" stroke="#272727" stroke-linecap="round" />
+										<path d="M12 20.25L12 21.75" stroke="#272727" stroke-linecap="round" />
+										<path d="M5.10547 5.10547L6.16613 6.16613" stroke="#272727" stroke-linecap="round" />
+										<path d="M17.834 17.834L18.8946 18.8946" stroke="#272727" stroke-linecap="round" />
+										<path d="M2.25 12L3.75 12" stroke="#272727" stroke-linecap="round" />
+										<path d="M20.25 12L21.75 12" stroke="#272727" stroke-linecap="round" />
+										<path d="M5.10547 18.8945L6.16613 17.8339" stroke="#272727" stroke-linecap="round" />
+										<path d="M17.834 6.16602L18.8946 5.10536" stroke="#272727" stroke-linecap="round" />
+										<circle cx="12" cy="12" r="4" stroke="#272727" />
+									</svg>
+								</button>
+								<button class="dark-mode click-mode">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M17.4968 9.92275L17.4966 9.92413C17.0232 14.1853 13.4055 17.5 9.02183 17.5C6.76173 17.5 4.59417 16.602 2.99601 15.0036C1.39785 13.4052 0.5 11.2373 0.5 8.97675C0.5 4.58531 3.8195 0.969377 8.07512 0.501616C8.52227 0.471179 8.77709 0.945675 8.5466 1.28891L8.54648 1.28884L8.54025 1.2986C7.9589 2.20917 7.61965 3.30477 7.61965 4.46513L7.61965 4.46553C7.62049 5.52608 7.90634 6.56693 8.44727 7.47913C8.9882 8.39133 9.76434 9.14136 10.6945 9.65072C11.6246 10.1601 12.6745 10.41 13.7344 10.3744C14.7928 10.3389 15.8223 10.0198 16.7154 9.45055C17.1018 9.21408 17.5423 9.52324 17.4968 9.92275Z"
+											stroke="white" />
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="header-search__box mob">
+							<div class="header-search__box-icon">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="7" cy="7" r="5.5" stroke="#272727" stroke-opacity="0.8" />
+									<path d="M15 15L11 11" stroke="#272727" stroke-opacity="0.8" stroke-linecap="round" />
+								</svg>
+							</div>
+							<input type="text" placeholder="Поиск билетов">
+						</div>
+						<ul class="nav">
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Концерт</a>
+							</li>
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Спектакли</a>
+							</li>
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Шоу</a>
+							</li>
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Ещё</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="header-buttons pc">
+						<div class="header-buttons__box d-flex align-items-center">
+							<a href="tel:+7 999 999 99 99" class="head-tel">+7 999 999 99 99</a>
+
+
+							<label class="header-btn d-flex align-items-center justify-content-center">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.5" y="1.5" width="13" height="13" rx="1.5" stroke="#272727" />
+									<line x1="4.5" y1="2.5" x2="4.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+									<line x1="11.5" y1="4.5" x2="4.5" y2="4.5" stroke="#272727" stroke-linecap="round" />
+									<line x1="11.5" y1="2.5" x2="11.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+								</svg>
+								<input class="header-date" type="text" name="daterange" value="" placeholder="Выбор даты" />
+							</label>
+							<button class="header-btn d-flex align-items-center justify-content-center">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7C14 4 12 1 8 1C4 1 1.99997 4 2 7C2.00004 10.9052 7.5 15 8 15C8.5 15 14 10.9052 14 7Z"
+										stroke="#272727" stroke-linejoin="round" />
+									<circle cx="8" cy="7" r="1" fill="#272727" />
+								</svg>
+								<span>Москва</span>
+							</button>
+							<button class="white-mode click-mode">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2.25L12 3.75" stroke="#272727" stroke-linecap="round" />
+									<path d="M12 20.25L12 21.75" stroke="#272727" stroke-linecap="round" />
+									<path d="M5.10547 5.10547L6.16613 6.16613" stroke="#272727" stroke-linecap="round" />
+									<path d="M17.834 17.834L18.8946 18.8946" stroke="#272727" stroke-linecap="round" />
+									<path d="M2.25 12L3.75 12" stroke="#272727" stroke-linecap="round" />
+									<path d="M20.25 12L21.75 12" stroke="#272727" stroke-linecap="round" />
+									<path d="M5.10547 18.8945L6.16613 17.8339" stroke="#272727" stroke-linecap="round" />
+									<path d="M17.834 6.16602L18.8946 5.10536" stroke="#272727" stroke-linecap="round" />
+									<circle cx="12" cy="12" r="4" stroke="#272727" />
+								</svg>
+							</button>
+							<button class="dark-mode click-mode">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M17.4968 9.92275L17.4966 9.92413C17.0232 14.1853 13.4055 17.5 9.02183 17.5C6.76173 17.5 4.59417 16.602 2.99601 15.0036C1.39785 13.4052 0.5 11.2373 0.5 8.97675C0.5 4.58531 3.8195 0.969377 8.07512 0.501616C8.52227 0.471179 8.77709 0.945675 8.5466 1.28891L8.54648 1.28884L8.54025 1.2986C7.9589 2.20917 7.61965 3.30477 7.61965 4.46513L7.61965 4.46553C7.62049 5.52608 7.90634 6.56693 8.44727 7.47913C8.9882 8.39133 9.76434 9.14136 10.6945 9.65072C11.6246 10.1601 12.6745 10.41 13.7344 10.3744C14.7928 10.3389 15.8223 10.0198 16.7154 9.45055C17.1018 9.21408 17.5423 9.52324 17.4968 9.92275Z"
+										stroke="white" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="main-sec__top">
+				<div class="container">
+					<div class="row">
+						<div class="home-top-slide">
+							<div class="home-slider-text">
+								<h1>Популярное в Москве сейчас</h1>
+							</div>
+							<div class="swiper homeTopSlide mt-3 mb-4">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<video controls="controls" preload='none' autoplay muted>
+												<source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
+											</video>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<img class="object-fit-cover w-100" src="images/home-slider/Rectangle 3065 (1).png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<img class="object-fit-cover w-100" src="images/home-slider/Rectangle 3065 (2).png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<img class="object-fit-cover w-100" src="images/home-slider/Rectangle 3065 (3).png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<img class="object-fit-cover w-100" src="images/home-slider/Rectangle 3065.png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<img class="object-fit-cover w-100" src="images/home-slider/Rectangle 3065 (1).png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<img class="object-fit-cover w-100" src="images/home-slider/Rectangle 3065 (2).png" alt="" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="home-top-card">
+											<img class="object-fit-cover w-100" src="images/home-slider/Rectangle 3065 (3).png" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="main-sec">
+				<div class="container">
+					<div class="main-sec__slider position-relative">
+						<div class="swiper quality-slide-in">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="main-bg__box position-relative">
+										<div class="main-bg__box-img">
+											<img class="ballerina-img__none" src="images/balerina-bg.png" alt="">
+											<img class="ballerina-img__media d-none" src="images/media-ballerina-img.png" alt="">
+										</div>
+										<div
+											class="banner-content d-flex align-items-center justify-content-between flex-column  position-absolute h-100 top-0 w-100">
+											<div class="main-bg__box-top d-flex align-items-start justify-content-between w-100">
+												<div class="main-bg__box-info d-flex align-items-center">
+													<p>ДК Руслан</p>
+													<span class="middle-dot"></span>
+													<p class="concert-data">4 марта 2023 , 18:00</p>
+												</div>
+												<div class="main-bg__box-btn">
+													<span>ОТ 3 000 ₽</span>
+												</div>
+											</div>
+											<div class="main-bg__box-bottom d-flex align-items-end justify-content-between w-100">
+												<div class="main-bg__box-bottom-info">
+													<h3>Лебединое озеро</h3>
+													<div class="text-in d-flex align-items-center">
+														<p>Самое знаменитое произведение искусства в истории балета </p>
+														<span class="middle-dot mx-3"></span>
+														<span class="concert-age">12+</span>
+													</div>
+												</div>
+												<div class="main-bg__box-bottom-button">
+													<a href="#!" class="btn d-flex align-items-center">
+														<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+																stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<span>КУПИТЬ БИЛЕТЫ</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="main-bg__box position-relative">
+										<div class="main-bg__box-img">
+											<img class="ballerina-img__none" src="images/balerina-bg.png" alt="">
+											<img class="ballerina-img__media d-none" src="images/media-ballerina-img.png" alt="">
+										</div>
+										<div
+											class="banner-content d-flex align-items-center justify-content-between flex-column  position-absolute h-100 top-0 w-100">
+											<div class="main-bg__box-top d-flex align-items-start justify-content-between w-100">
+												<div class="main-bg__box-info d-flex align-items-center">
+													<p>ДК Руслан</p>
+													<span class="middle-dot"></span>
+													<p class="concert-data">4 марта 2023 , 18:00</p>
+												</div>
+												<div class="main-bg__box-btn">
+													<span>ОТ 3 000 ₽</span>
+												</div>
+											</div>
+											<div class="main-bg__box-bottom d-flex align-items-end justify-content-between w-100">
+												<div class="main-bg__box-bottom-info">
+													<h3>Лебединое озеро</h3>
+													<div class="text-in d-flex align-items-center">
+														<p>Самое знаменитое произведение искусства в истории балета </p>
+														<span class="middle-dot mx-3"></span>
+														<span class="concert-age">12+</span>
+													</div>
+												</div>
+												<div class="main-bg__box-bottom-button">
+													<a href="#!" class="btn d-flex align-items-center">
+														<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+																stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<span>КУПИТЬ БИЛЕТЫ</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination1"></div>
+						</div>
+						<div class="swiper-button-next2"></div>
+						<div class="swiper-button-prev2"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- you-like__concert -->
+			<section class="you-like__concert">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="title">
+								<h2 class="title-text big-title__text">Сегодня</h2>
+							</div>
+						</div>
+					</div>
+
+					<div class="concert-cards">
+						<div class="row">
+							<div class="col-lg-8 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img class="ballerina-img ballerina-img__none" src="images/balerina.png" alt="" />
+										<img class="ballerina-img__media d-none" src="images/media-ballerina-img.png" alt="">
+									</div>
+									<div class="content-box position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info d-flex align-items-center">
+												<p>Дворец Губернаторский</p>
+												<span class="middle-dot"></span>
+												<p class="concert-data">28 февраля 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-end justify-content-between">
+											<div class="main-bg__box-bottom-info">
+												<h3>Лебединое озеро</h3>
+												<p>Самое знаменитое произведение искусства в истории балета <span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button">
+												<a href="#!" class="btn d-flex align-items-center justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/card-img1.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>ДК ДС Волга Спорт-Арена</p>
+												<p>5 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Руки вверх!</h3>
+												<p>Грандиозные шоу всенародно любимой группы <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-4 mb-4">
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img2.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>Киноконцертный комплекс Современник</p>
+												<p>11 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Голодный зверь</h3>
+												<p>
+													Концерт по случаю своего 10-летия в Ульяновске!
+													<span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img3.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>Дворец Губернаторский</p>
+												<p>19 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Спектакль «Анна Каренина»</h3>
+												<p>
+													Концерт по случаю своего 10-летия в Ульяновске!
+													<span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2500">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img4.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>
+													УлГТУ центр науки, техники и культуры «Тарелка»
+												</p>
+												<p>31 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>
+													Легендарные песни группы «Кино» к 60-летию Виктора
+													Цоя
+												</h3>
+												<p>Трибьют программа <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-4">
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<a href="#!" class="you-like__concert-box position-relative">
+									<div class="img-box img-box__cat position-relative">
+									</div>
+									<div
+										class="content-box cat-block content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<span class="main-bg__box-info-link">
+													Посмотреть все события на сегодня в Ульяновске
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative object-fit-img">
+										<img src="images/concert-img5.png" alt="" />
+									</div>
+									<div class="content-box position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info d-flex align-items-center">
+												<p>Дворец Губернаторский</p>
+												<span class="middle-dot"></span>
+												<p class="concert-data">11 апреля 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-end justify-content-between">
+											<div class="main-bg__box-bottom-info">
+												<h3>Любэ</h3>
+												<p>
+													Не валяй дурака, Америка, Конь и другие любимые
+													песни
+													<span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button">
+												<a href="#!" class="btn d-flex align-items-center justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- you-like__concert -->
+			<section class="you-like__concert">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="title">
+								<h2 class="title-text big-title__text">Концерты</h2>
+							</div>
+						</div>
+					</div>
+
+					<div class="concert-cards">
+						<div class="row">
+							<div class="col-lg-8 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img7.png" alt="" />
+									</div>
+									<div class="content-box position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info d-flex align-items-center">
+												<p>ДК Руслан</p>
+												<p class="concert-data">4 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-end justify-content-between">
+											<div class="main-bg__box-bottom-info">
+												<h3>Каспийский грузз</h3>
+												<p>
+													Большой юбилейный концерт в честь 10-летия группы
+													<span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button">
+												<a href="#!" class="btn d-flex align-items-center justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/card-img1.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>ДК ДС Волга Спорт-Арена</p>
+												<p>5 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Руки вверх!</h3>
+												<p>Грандиозные шоу всенародно любимой группы <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-4 mb-4">
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img2.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>Киноконцертный комплекс Современник</p>
+												<p>11 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Голодный зверь</h3>
+												<p>
+													Концерт по случаю своего 10-летия в Ульяновске!
+													<span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img8.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>Дворец Губернаторский</p>
+												<p>19 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Николай Носков</h3>
+												<p>Любимый миллионами певец <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2500">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img9.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>
+													УлГТУ центр науки, техники и культуры «Тарелка»
+												</p>
+												<p>31 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Кватро</h3>
+												<p>Любимый миллионами певец <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-4">
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<a href="#!" class="you-like__concert-box cat-block position-relative">
+									<div class="img-box img-box__cat position-relative cat-beffore">
+										<img class="cat-2 media-img__none" src="images/concert-img10.svg" alt="" />
+										<img class="cat-2 d-none media-img" src="images/media-img-cat.png" alt="">
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<span class="main-bg__box-info-link">
+													Посмотреть все события на сегодня в Ульяновске
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative object-fit-img">
+										<img src="images/concert-img5.png" alt="" />
+									</div>
+									<div class="content-box position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info d-flex align-items-center">
+												<p>Дворец Губернаторский</p>
+												<span class="middle-dot"></span>
+												<p class="concert-data">11 апреля 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-end justify-content-between">
+											<div class="main-bg__box-bottom-info">
+												<h3>Любэ</h3>
+												<p>Не валяй дурака, Америка, Конь и другие любимые песни <span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button">
+												<a href="#!" class="btn d-flex align-items-center justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- you-like__concert -->
+			<section class="you-like__concert">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="title">
+								<h2 class="title-text big-title__text">Театр</h2>
+							</div>
+						</div>
+					</div>
+
+					<div class="concert-cards">
+						<div class="row">
+							<div class="col-lg-8 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img7.png" alt="" />
+									</div>
+									<div class="content-box position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info d-flex align-items-center">
+												<p>ДК Руслан</p>
+												<span class="middle-dot"></span>
+												<p class="concert-data">4 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-end justify-content-between">
+											<div class="main-bg__box-bottom-info">
+												<h3>Каспийский грузз</h3>
+												<p>
+													Большой юбилейный концерт в честь 10-летия группы
+													<span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button">
+												<a href="#!" class="btn d-flex align-items-center justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/card-img1.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>ДК ДС Волга Спорт-Арена</p>
+												<p>5 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Руки вверх!</h3>
+												<p>Грандиозные шоу всенародно любимой группы <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-4 mb-4">
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img2.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>Киноконцертный комплекс Современник</p>
+												<p>11 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Голодный зверь</h3>
+												<p>Концерт по случаю своего 10-летия в Ульяновске! <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img8.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>Дворец Губернаторский</p>
+												<p>19 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Николай Носков</h3>
+												<p>Любимый миллионами певец <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2500">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative">
+										<img src="images/concert-img9.png" alt="" />
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<p>
+													УлГТУ центр науки, техники и культуры «Тарелка»
+												</p>
+												<p>31 марта 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-start flex-column">
+											<div class="main-bg__box-bottom-info">
+												<h3>Кватро</h3>
+												<p>Любимый миллионами певец <span class="concert-age">12+</span></p>
+											</div>
+											<div class="main-bg__box-bottom-button w-100">
+												<a href="#!"
+													class="btn d-flex align-items-center justify-content-center w-100 justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-4">
+							<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+								<a href="#!" class="you-like__concert-box position-relative">
+									<div class="img-box img-box__cat position-relative cat-beffore">
+										<img class="cat-3 media-img__none" src="images/concert-img11.svg" alt="" />
+										<img class="cat-2 d-none media-img hello-cat" src="images/hello-cat.png" alt="">
+									</div>
+									<div
+										class="content-box content-box__small position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info">
+												<span class="main-bg__box-info-link">
+													Посмотреть все события на сегодня в Ульяновске
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+								<div class="you-like__concert-box position-relative">
+									<div class="img-box position-relative object-fit-img">
+										<img src="images/concert-img5.png" alt="" />
+									</div>
+									<div class="content-box position-absolute d-flex flex-column justify-content-between">
+										<div class="main-bg__box-top d-flex align-items-start justify-content-between">
+											<div class="main-bg__box-info d-flex align-items-center">
+												<p>Дворец Губернаторский</p>
+												<span class="middle-dot"></span>
+												<p class="concert-data">11 апреля 2023 , 18:00</p>
+											</div>
+											<div class="main-bg__box-btn">
+												<span>ОТ 3 000 ₽</span>
+											</div>
+										</div>
+										<div class="main-bg__box-bottom d-flex align-items-end justify-content-between">
+											<div class="main-bg__box-bottom-info">
+												<h3>Любэ</h3>
+												<p>Не валяй дурака, Америка, Конь и другие любимые песни <span class="concert-age">12+</span>
+												</p>
+											</div>
+											<div class="main-bg__box-bottom-button">
+												<a href="#!" class="btn d-flex align-items-center justify-content-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M8.09449 3.86789L9 4.77341M9.80519 5.57859L10.7107 6.48411M11.5159 7.2893L12.4214 8.19481M13.2266 9L14.1321 9.90551M15.0376 5.07568C14.7574 5.35592 14.3773 5.51335 13.981 5.51335C13.5847 5.51335 13.2046 5.35592 12.9243 5.07568C12.6441 4.79544 12.4866 4.41535 12.4866 4.01903C12.4866 3.62271 12.6441 3.24262 12.9243 2.96238L10.9624 1L1 10.9624L2.96238 12.9248C3.24256 12.6445 3.62259 12.4871 4.01887 12.487C4.41515 12.487 4.79522 12.6444 5.07546 12.9245C5.3557 13.2047 5.51316 13.5848 5.5132 13.981C5.51324 14.3773 5.35586 14.7574 5.07568 15.0376L7.03762 17L17 7.03762L15.0376 5.07568Z"
+															stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>КУПИТЬ БИЛЕТЫ</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- footer  -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-lg-6 col-md-12">
+						<div class="footer-title">
+							<h2>Подпишитесь на скидки и новости от «Симбилет»</h2>
+						</div>
+						<div class="footer-form d-flex justify-content-between">
+							<input type="text" placeholder="Ваша электронная почта ">
+							<button class="btn">Подписаться</button>
+						</div>
+						<div class="row footer-nav align-items-start justify-content-between">
+							<div class="col-lg-4 col-md-5 col-sm-6">
+								<ul>
+									<h4>Контакты</h4>
+									<li>
+										<a href="#">432035, г. Ульяновск,
+											Гая пр-кт, д. 100 к. 5, помещ. 5</a>
+									</li>
+									<li>
+										<a href="#">+7 (999) 999-99-99</a>
+									</li>
+									<li>
+										<a href="#">info@simbilet.ru</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-6">
+								<ul>
+									<h4>Наши события</h4>
+									<div class="footer-media__flex">
+										<ul>
+											<li>
+												<a href="#">Концерты</a>
+											</li>
+											<li>
+												<a href="#">Театр</a>
+											</li>
+											<li>
+												<a href="#">Шоу</a>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												<a href="#">Для детей</a>
+											</li>
+											<li>
+												<a href="#">Вечеринки</a>
+											</li>
+											<li>
+												<a href="#">Тренинги</a>
+											</li>
+										</ul>
+									</div>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<ul>
+									<h4>Партнерам и организаторам</h4>
+									<li>
+										<a href="#">О нас</a>
+									</li>
+									<li>
+										<a href="#">Помощь в продвижении концерта</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer-img__box">
+							<img src="images/footer-img.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom d-flex align-items-center justify-content-between">
+					<div class="footer-bottom__box">
+						<span>© 2023 «Симбилет»</span>
+					</div>
+					<div class="footer-bottom__box">
+						<a href="public_offer.html">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- js -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="libs/bootstrap5/bootstrap.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="js/aos.main.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

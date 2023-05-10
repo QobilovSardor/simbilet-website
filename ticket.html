@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap5/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="screen">
+	<link rel="stylesheet icon" type="text/css" href="css/style.css" media="screen">
+	<link href="css/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>SimBilet</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header-inner  w-100 d-flex align-items-center justify-content-between">
+					<div class="header-logo">
+						<a href="#" class="white-mode">
+							<svg width="230" height="28" viewBox="0 0 230 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_1_121)">
+									<path
+										d="M26.4742 18.4197C26.4748 20.9254 25.4972 23.3315 23.7512 25.1219C22.0052 26.9123 19.6298 27.9442 17.1348 27.9964H2.65456V24.5927H10.2494C10.2435 24.579 10.2369 24.5657 10.2295 24.5528H12.3199V19.2337H8.78683C6.33315 19.0517 4.04547 17.9211 2.4053 16.0797C0.76513 14.2384 -0.0996118 11.83 -0.00692091 9.36144C0.08577 6.89288 1.12866 4.55669 2.90226 2.84458C4.67586 1.13247 7.04183 0.17797 9.5022 0.181977H9.67309V0.166016H25.2104V3.57174H17.1328V8.84494H17.2878C19.7557 8.93637 22.092 9.9853 23.8054 11.771C25.5187 13.5568 26.4754 15.9401 26.4742 18.4197Z"
+										fill="#439799" />
+									<path
+										d="M119.824 20.2109C119.824 18.7475 119.406 17.3148 118.619 16.0827C117.833 14.8506 116.711 13.8709 115.387 13.2598C116.664 12.5068 117.675 11.3707 118.277 10.0113C118.878 8.65186 119.041 7.13731 118.741 5.68044C118.441 4.22357 117.695 2.89757 116.606 1.88874C115.517 0.879911 114.14 0.238936 112.67 0.0558643V0.0299273H112.416C112.217 0.0119709 112 0 111.788 0C111.575 0 111.369 0.0119709 111.162 0.0299273H95.8232V27.8603H112.67V27.8444C114.606 27.7255 116.424 26.8696 117.754 25.4511C119.083 24.0327 119.823 22.1586 119.824 20.2109Z"
+										fill="#272727" />
+									<path
+										d="M148.455 3.56975V0.166016H121.998V3.56975H126.803V24.5927H121.998V27.9964H148.455V24.5927H143.65V3.56975H148.455Z"
+										fill="#272727" />
+									<path
+										d="M53.7975 3.56975V0.166016H27.3389V3.56975H32.1457V24.5927H27.3389V27.9964H53.7975V24.5927H48.9906V3.56975H53.7975Z"
+										fill="#439799" />
+									<path
+										d="M201.038 24.6525C199.916 24.6525 198.841 24.2052 198.048 23.4089C197.255 22.6127 196.809 21.5328 196.809 20.4068C196.809 19.2807 197.255 18.2008 198.048 17.4046C198.841 16.6084 199.916 16.1611 201.038 16.1611C201.171 16.1611 201.304 16.1611 201.435 16.181V13.1464C201.303 13.1607 201.17 13.1681 201.038 13.1684C199.932 13.1443 198.879 12.6863 198.106 11.8925C197.332 11.0987 196.899 10.0323 196.899 8.92167C196.899 7.81105 197.332 6.74461 198.106 5.95083C198.879 5.15704 199.932 4.69905 201.038 4.67498C201.171 4.67498 201.304 4.67498 201.435 4.69493V0.169922H179.775V28.0003H201.435V24.6325C201.296 24.6445 201.171 24.6525 201.038 24.6525Z"
+										fill="#272727" />
+									<path d="M169.577 24.5946V0.169922H152.73V24.5946V25.263V28.0003H178.273V24.5946H169.577Z"
+										fill="#272727" />
+									<path d="M230 0.169922H203.299V4.33181H208.227V28.0003H225.074V4.33181H230V0.169922Z"
+										fill="#272727" />
+									<path
+										d="M82.9866 0.0244141C82.8603 2.48948 81.7962 4.81175 80.0138 6.5118C78.2315 8.21186 75.8671 9.15991 73.4087 9.16023C70.9505 9.15988 68.5863 8.21177 66.8043 6.51167C65.0223 4.81156 63.9585 2.4893 63.8327 0.0244141H57.5713V27.7571H67.1294V20.1755H68.6157V27.7571H78.2016V20.1755H79.684V27.7571H89.2441V0.0244141H82.9866Z"
+										fill="#439799" />
+								</g>
+								<defs>
+									<clipPath id="clip0_1_121">
+										<rect width="230" height="28" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a href="#!" class="dark-mode">
+							<svg width="230" height="28" viewBox="0 0 230 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_1_5049)">
+									<path
+										d="M26.4742 18.4197C26.4748 20.9254 25.4972 23.3315 23.7512 25.1219C22.0052 26.9123 19.6298 27.9442 17.1348 27.9964H2.65456V24.5927H10.2494C10.2435 24.579 10.2369 24.5657 10.2295 24.5528H12.3199V19.2337H8.78683C6.33315 19.0517 4.04547 17.9211 2.4053 16.0797C0.76513 14.2384 -0.0996118 11.83 -0.00692091 9.36144C0.08577 6.89288 1.12866 4.55669 2.90226 2.84458C4.67586 1.13247 7.04183 0.17797 9.5022 0.181977H9.67309V0.166016H25.2104V3.57174H17.1328V8.84494H17.2878C19.7557 8.93637 22.092 9.9853 23.8054 11.771C25.5187 13.5568 26.4754 15.9401 26.4742 18.4197Z"
+										fill="#439799" />
+									<path
+										d="M119.824 20.2109C119.824 18.7475 119.406 17.3148 118.619 16.0827C117.833 14.8506 116.711 13.8709 115.387 13.2598C116.664 12.5068 117.675 11.3707 118.277 10.0113C118.878 8.65186 119.041 7.13731 118.741 5.68044C118.441 4.22357 117.695 2.89757 116.606 1.88874C115.517 0.879911 114.14 0.238936 112.67 0.0558643V0.0299273H112.416C112.217 0.0119709 112 0 111.788 0C111.575 0 111.369 0.0119709 111.162 0.0299273H95.8232V27.8603H112.67V27.8444C114.606 27.7255 116.424 26.8696 117.754 25.4511C119.083 24.0327 119.823 22.1586 119.824 20.2109Z"
+										fill="white" />
+									<path
+										d="M148.455 3.56975V0.166016H121.998V3.56975H126.803V24.5927H121.998V27.9964H148.455V24.5927H143.65V3.56975H148.455Z"
+										fill="white" />
+									<path
+										d="M53.7975 3.56975V0.166016H27.3389V3.56975H32.1457V24.5927H27.3389V27.9964H53.7975V24.5927H48.9906V3.56975H53.7975Z"
+										fill="#439799" />
+									<path
+										d="M201.038 24.6525C199.916 24.6525 198.841 24.2052 198.048 23.4089C197.255 22.6127 196.809 21.5328 196.809 20.4068C196.809 19.2807 197.255 18.2008 198.048 17.4046C198.841 16.6084 199.916 16.1611 201.038 16.1611C201.171 16.1611 201.304 16.1611 201.435 16.181V13.1464C201.303 13.1607 201.17 13.1681 201.038 13.1684C199.932 13.1443 198.879 12.6863 198.106 11.8925C197.332 11.0987 196.899 10.0323 196.899 8.92167C196.899 7.81105 197.332 6.74461 198.106 5.95083C198.879 5.15704 199.932 4.69905 201.038 4.67498C201.171 4.67498 201.304 4.67498 201.435 4.69493V0.169922H179.775V28.0003H201.435V24.6325C201.296 24.6445 201.171 24.6525 201.038 24.6525Z"
+										fill="white" />
+									<path d="M169.577 24.5946V0.169922H152.73V24.5946V25.263V28.0003H178.273V24.5946H169.577Z"
+										fill="white" />
+									<path d="M230 0.169922H203.299V4.33181H208.227V28.0003H225.074V4.33181H230V0.169922Z" fill="white" />
+									<path
+										d="M82.9866 0.0244141C82.8603 2.48948 81.7962 4.81175 80.0138 6.5118C78.2315 8.21186 75.8671 9.15991 73.4087 9.16023C70.9505 9.15988 68.5863 8.21177 66.8043 6.51167C65.0223 4.81156 63.9585 2.4893 63.8327 0.0244141H57.5713V27.7571H67.1294V20.1755H68.6157V27.7571H78.2016V20.1755H79.684V27.7571H89.2441V0.0244141H82.9866Z"
+										fill="#439799" />
+								</g>
+								<defs>
+									<clipPath id="clip0_1_5049">
+										<rect width="230" height="28" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+
+					<div class="header-search d-flex align-items-center">
+						<div class="header-search__box pc">
+							<div class="header-search__box-icon">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="7" cy="7" r="5.5" stroke="#272727" stroke-opacity="0.8" />
+									<path d="M15 15L11 11" stroke="#272727" stroke-opacity="0.8" stroke-linecap="round" />
+								</svg>
+							</div>
+							<input type="text" placeholder="Поиск билетов">
+						</div>
+					</div>
+
+					<div class="header-nav">
+						<div class="header-buttons mob">
+							<div class="header-buttons__box d-flex align-items-center">
+								<!-- <button >
+									
+								</button> -->
+								<label class="header-btn d-flex align-items-center justify-content-center">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="1.5" y="1.5" width="13" height="13" rx="1.5" stroke="#272727" />
+										<line x1="4.5" y1="2.5" x2="4.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+										<line x1="11.5" y1="4.5" x2="4.5" y2="4.5" stroke="#272727" stroke-linecap="round" />
+										<line x1="11.5" y1="2.5" x2="11.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+									</svg>
+									<input class="header-date" type="text" name="daterange" value="" placeholder="Выбор даты" />
+								</label>
+
+								<button class="header-btn d-flex align-items-center justify-content-center">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 7C14 4 12 1 8 1C4 1 1.99997 4 2 7C2.00004 10.9052 7.5 15 8 15C8.5 15 14 10.9052 14 7Z"
+											stroke="#272727" stroke-linejoin="round" />
+										<circle cx="8" cy="7" r="1" fill="#272727" />
+									</svg>
+									<span>Москва</span>
+								</button>
+								<button class="white-mode click-mode">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2.25L12 3.75" stroke="#272727" stroke-linecap="round" />
+										<path d="M12 20.25L12 21.75" stroke="#272727" stroke-linecap="round" />
+										<path d="M5.10547 5.10547L6.16613 6.16613" stroke="#272727" stroke-linecap="round" />
+										<path d="M17.834 17.834L18.8946 18.8946" stroke="#272727" stroke-linecap="round" />
+										<path d="M2.25 12L3.75 12" stroke="#272727" stroke-linecap="round" />
+										<path d="M20.25 12L21.75 12" stroke="#272727" stroke-linecap="round" />
+										<path d="M5.10547 18.8945L6.16613 17.8339" stroke="#272727" stroke-linecap="round" />
+										<path d="M17.834 6.16602L18.8946 5.10536" stroke="#272727" stroke-linecap="round" />
+										<circle cx="12" cy="12" r="4" stroke="#272727" />
+									</svg>
+								</button>
+								<button class="dark-mode click-mode">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M17.4968 9.92275L17.4966 9.92413C17.0232 14.1853 13.4055 17.5 9.02183 17.5C6.76173 17.5 4.59417 16.602 2.99601 15.0036C1.39785 13.4052 0.5 11.2373 0.5 8.97675C0.5 4.58531 3.8195 0.969377 8.07512 0.501616C8.52227 0.471179 8.77709 0.945675 8.5466 1.28891L8.54648 1.28884L8.54025 1.2986C7.9589 2.20917 7.61965 3.30477 7.61965 4.46513L7.61965 4.46553C7.62049 5.52608 7.90634 6.56693 8.44727 7.47913C8.9882 8.39133 9.76434 9.14136 10.6945 9.65072C11.6246 10.1601 12.6745 10.41 13.7344 10.3744C14.7928 10.3389 15.8223 10.0198 16.7154 9.45055C17.1018 9.21408 17.5423 9.52324 17.4968 9.92275Z"
+											stroke="white" />
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="header-search__box mob">
+							<div class="header-search__box-icon">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="7" cy="7" r="5.5" stroke="#272727" stroke-opacity="0.8" />
+									<path d="M15 15L11 11" stroke="#272727" stroke-opacity="0.8" stroke-linecap="round" />
+								</svg>
+							</div>
+							<input type="text" placeholder="Поиск билетов">
+						</div>
+						<ul class="nav">
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Концерт</a>
+							</li>
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Спектакли</a>
+							</li>
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Шоу</a>
+							</li>
+							<li class="navbar-item">
+								<a class="navbar-link" href="#">Ещё</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="header-buttons pc">
+						<div class="header-buttons__box d-flex align-items-center">
+							<a href="tel:+7 999 999 99 99" class="head-tel">+7 999 999 99 99</a>
+
+
+							<label class="header-btn d-flex align-items-center justify-content-center">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.5" y="1.5" width="13" height="13" rx="1.5" stroke="#272727" />
+									<line x1="4.5" y1="2.5" x2="4.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+									<line x1="11.5" y1="4.5" x2="4.5" y2="4.5" stroke="#272727" stroke-linecap="round" />
+									<line x1="11.5" y1="2.5" x2="11.5" y2="0.5" stroke="#272727" stroke-linecap="round" />
+								</svg>
+								<input class="header-date" type="text" name="daterange" value="" placeholder="Выбор даты" />
+							</label>
+							<button class="header-btn d-flex align-items-center justify-content-center">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7C14 4 12 1 8 1C4 1 1.99997 4 2 7C2.00004 10.9052 7.5 15 8 15C8.5 15 14 10.9052 14 7Z"
+										stroke="#272727" stroke-linejoin="round" />
+									<circle cx="8" cy="7" r="1" fill="#272727" />
+								</svg>
+								<span>Москва</span>
+							</button>
+							<button class="white-mode click-mode">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2.25L12 3.75" stroke="#272727" stroke-linecap="round" />
+									<path d="M12 20.25L12 21.75" stroke="#272727" stroke-linecap="round" />
+									<path d="M5.10547 5.10547L6.16613 6.16613" stroke="#272727" stroke-linecap="round" />
+									<path d="M17.834 17.834L18.8946 18.8946" stroke="#272727" stroke-linecap="round" />
+									<path d="M2.25 12L3.75 12" stroke="#272727" stroke-linecap="round" />
+									<path d="M20.25 12L21.75 12" stroke="#272727" stroke-linecap="round" />
+									<path d="M5.10547 18.8945L6.16613 17.8339" stroke="#272727" stroke-linecap="round" />
+									<path d="M17.834 6.16602L18.8946 5.10536" stroke="#272727" stroke-linecap="round" />
+									<circle cx="12" cy="12" r="4" stroke="#272727" />
+								</svg>
+							</button>
+							<button class="dark-mode click-mode">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M17.4968 9.92275L17.4966 9.92413C17.0232 14.1853 13.4055 17.5 9.02183 17.5C6.76173 17.5 4.59417 16.602 2.99601 15.0036C1.39785 13.4052 0.5 11.2373 0.5 8.97675C0.5 4.58531 3.8195 0.969377 8.07512 0.501616C8.52227 0.471179 8.77709 0.945675 8.5466 1.28891L8.54648 1.28884L8.54025 1.2986C7.9589 2.20917 7.61965 3.30477 7.61965 4.46513L7.61965 4.46553C7.62049 5.52608 7.90634 6.56693 8.44727 7.47913C8.9882 8.39133 9.76434 9.14136 10.6945 9.65072C11.6246 10.1601 12.6745 10.41 13.7344 10.3744C14.7928 10.3389 15.8223 10.0198 16.7154 9.45055C17.1018 9.21408 17.5423 9.52324 17.4968 9.92275Z"
+										stroke="white" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="tickets-higher">
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item1"><a href="#"> <img src="images/icons/home-icon.svg" alt=""></a></li>
+
+							<span><img src="images/icons/next-icon.svg" alt="image_left" class="tickets-higher__left"></span>
+
+							<li class="breadcrumb-item3 active"><a href="#">Партнёрам и организаторам</a></li>
+						</ol>
+					</nav>
+				</div>
+			</section>
+
+			<section>
+				<div class="container">
+					<section class="main-sec ticket-sec">
+						<div class="container">
+							<div class="main-bg__box position-relative main-bg__box-ticket">
+								<div class="main-bg__box-img fit-img1">
+									<img src="images/fallow_dance.jpg" alt="">
+								</div>
+								<div class="ticket-img">
+									<img src="images/ticket.png" alt="">
+								</div>
+								<div
+									class="banner-content d-flex align-items-start justify-content-between flex-column position-absolute h-100 top-0 w-100">
+									<div></div>
+									<div class="main-bg__box-bottom d-flex align-items-end justify-content-between w-100">
+										<div class="main-bg__box-bottom-info">
+											<h3>Поможем продать билеты на ваше мероприятие</h3>
+											<p>Комплекс услуг по продвижению и продаже билетов на мероприятия</p>
+										</div>
+										<div class="main-bg__box-bottom-button">
+											<a href="#!" class="btn d-flex align-items-center">
+												<span>НАЧАТЬ СОТРУДНИЧЕСТВО</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- concert-sec -->
+					<section class="concert-sec">
+						<div class="container">
+
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="title">
+										<h2 class="title-text very-small__title-text2">Увеличьте продажи билетов на своё мероприятие с нами!
+										</h2>
+									</div>
+								</div>
+							</div>
+
+							<div class="concert-sec__slider" data-aos="fade-up" data-aos-duration="1000">
+								<div class="concert-sec__slider-box">
+									<div class="swiper concert-swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="slide-in-img">
+													<img class="concert-swiper__img concert-swiper__img2" src="images/balet_dance.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="slide-in-img">
+													<img class="concert-swiper__img concert-swiper__img2" src="images/fallow_dance.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="slide-in-img">
+													<img class="concert-swiper__img concert-swiper__img2" src="images/concert-banner1.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+
+								<div class="concert-sec__content" data-aos="fade-up" data-aos-duration="1000">
+									<div class="row">
+										<div class="col-xl-10 show-text">
+											<p class="concert-sec__descr"><span class="concert-sec__descr-heading">Сотрудничество с нами
+													предоставляет организаторам событий ряд значительных преимуществ, которые помогут
+													оптимизировать
+													процесс продажи билетов и повысить эффективность маркетинга:</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="concert-sec__boxes">
+								<div class="row">
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="1000">
+										<div class="concert-sec__box">
+											<h2 class="concert-sec__box-title"><span>1.</span> Максимальное охват аудитории</h2>
+											<p class="concert-sec__box-paragrph">Наша сайт обеспечит вам широкий охват потенциальных
+												посетителей, благодаря интеграции с популярными социальными сетями и
+												партнерским сайтам.</p>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="2000">
+										<div class="concert-sec__box">
+											<img class="concert-sec__box-img" src="images/box-img1.png" alt="">
+										</div>
+									</div>
+								</div>
+
+								<div class="row concert-sec__box-mt">
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="1000">
+										<div class="concert-sec__box">
+											<img class="concert-sec__box-img" src="images/box-img2.png" alt="">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="2000">
+										<div class="concert-sec__box">
+											<h2 class="concert-sec__box-title"><span>2.</span>Гибкие и эффективные инструменты продвижения
+											</h2>
+											<p class="concert-sec__box-paragrph">Мы предлагаем разнообразные маркетинговые инструменты, от
+												целевой рекламы до партнерских программ, которые помогут
+												повысить видимость вашего события и привлечь больше заинтересованных посетителей.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="1000">
+										<div class="concert-sec__box">
+											<h2 class="concert-sec__box-title"><span>3.</span> Удобство и экономия времени</h2>
+											<p class="concert-sec__box-paragrph">На нашей платформе организаторам событий предоставляются все
+												необходимые сервисы для продажи билетов, мониторинга продаж
+												и коммуникации с аудиторией, что позволяет сосредоточиться на основных задачах и экономить
+												время.</p>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="2000">
+										<div class="concert-sec__box">
+											<img class="concert-sec__box-img" src="images/box-img3.svg" alt="">
+										</div>
+									</div>
+								</div>
+
+								<div class="row concert-sec__box-mt">
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="1000">
+										<div class="concert-sec__box">
+											<img class="concert-sec__box-img" src="images/box-img4.svg" alt="">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="2000">
+										<div class="concert-sec__box">
+											<h2 class="concert-sec__box-title"><span>4.</span> Аналитика и отчетность</h2>
+											<p class="concert-sec__box-paragrph">Мы предлагаем разнообразные маркетинговые инструменты, от
+												Получайте своевременную и полезную информацию об эффективности проведенных мероприятий, продажах
+												билетов и поведении
+												посетителей с помощью нашей системы отчетности и аналитики.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="concert-our__slider-box concert-our__slider-box-two position-relative" data-aos="fade-up"
+								data-aos-duration="1000">
+								<div class="swiper our-comman-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="slide-block">
+												<img class="concert-swiper__img" src="images/Farid_Medvedov.png" alt="">
+												<div class="slide-text">
+													<h3>Фарид Медведев</h3>
+													<p>Генеральный директор</p>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="slide-block">
+												<img class="concert-swiper__img" src="images/Ayrat_Kadishev.png" alt="">
+												<div class="slide-text">
+													<h3>Айрат Кадышев</h3>
+													<p>Директор билетных касс</p>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="slide-block">
+												<img class="concert-swiper__img" src="images/Temur_Aysiye.png" alt="">
+												<div class="slide-text">
+													<h3>Тимур Айсие</h3>
+													<p>SMM-отдела</p>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="slide-block">
+												<img class="concert-swiper__img" src="images/Anastasia.png" alt="">
+												<div class="slide-text">
+													<h3>Анастасия Есина</h3>
+													<p>SMM-специалист</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-button-next2"></div>
+								<div class="swiper-button-prev2"></div>
+							</div>
+
+							<section class="consultation" data-aos="fade-up" data-aos-duration="1000">
+								<div class="background-cat position-relative">
+
+									<div class="d-flex">
+										<div class="title-cat-text bottom-0 start-0">
+											<h3>Получите бесплатную консультацию по продвижению мероприятия </h3>
+											<p>Оставьте заявку — вам перезвонит наш менеджер и проконсультирует вас по любым вопросам.</p>
+										</div>
+										<div class="cat-btn">
+											<a href="#!" class="btn bottom-0 end-0">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</section>
+				</div>
+			</section>
+		</main>
+
+		<!-- footer  -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-lg-6 col-md-12">
+						<div class="footer-title">
+							<h2>Подпишитесь на скидки и новости от «Симбилет»</h2>
+						</div>
+						<div class="footer-form d-flex justify-content-between">
+							<input type="text" placeholder="Ваша электронная почта ">
+							<button class="btn">Подписаться</button>
+						</div>
+						<div class="row footer-nav align-items-start justify-content-between">
+							<div class="col-lg-4 col-md-5 col-sm-6">
+								<ul>
+									<h4>Контакты</h4>
+									<li>
+										<a href="#">432035, г. Ульяновск,
+											Гая пр-кт, д. 100 к. 5, помещ. 5</a>
+									</li>
+									<li>
+										<a href="#">+7 (999) 999-99-99</a>
+									</li>
+									<li>
+										<a href="#">info@simbilet.ru</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-6">
+								<ul>
+									<h4>Наши события</h4>
+									<div class="footer-media__flex">
+										<ul>
+											<li>
+												<a href="#">Концерты</a>
+											</li>
+											<li>
+												<a href="#">Театр</a>
+											</li>
+											<li>
+												<a href="#">Шоу</a>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												<a href="#">Для детей</a>
+											</li>
+											<li>
+												<a href="#">Вечеринки</a>
+											</li>
+											<li>
+												<a href="#">Тренинги</a>
+											</li>
+										</ul>
+									</div>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<ul>
+									<h4>Партнерам и организаторам</h4>
+									<li>
+										<a href="#">О нас</a>
+									</li>
+									<li>
+										<a href="#">Помощь в продвижении концерта</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer-img__box">
+							<img src="images/footer-img.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom d-flex align-items-center justify-content-between">
+					<div class="footer-bottom__box">
+						<span>© 2023 «Симбилет»</span>
+					</div>
+					<div class="footer-bottom__box">
+						<a href="public_offer.html">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- js -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="libs/bootstrap5/bootstrap.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="js/aos.main.js"></script>
+	<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
