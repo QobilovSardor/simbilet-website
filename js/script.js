@@ -1,4 +1,32 @@
 $(function () {
+
+	AOS.init({
+		// duration: 1200
+	});
+
+	onElementHeightChange(document.body, function () {
+		AOS.refresh();
+	});
+
+
+	function onElementHeightChange(elm, callback) {
+		var lastHeight = elm.clientHeight
+		var newHeight;
+
+		(function run() {
+			newHeight = elm.clientHeight;
+			if (lastHeight !== newHeight) callback();
+			lastHeight = newHeight;
+
+			if (elm.onElementHeightChangeTimer) {
+				clearTimeout(elm.onElementHeightChangeTimer);
+			}
+
+			elm.onElementHeightChangeTimer = setTimeout(run, 200);
+		})();
+	}
+
+
 	$('.menu-opener').on('click', function (e) {
 		e.preventDefault();
 		$(this).toggleClass('active');
@@ -10,10 +38,12 @@ $(function () {
 		$('body').toggleClass('black-mode');
 	});
 
-	// date start
-	
+	$('.play-gif').on('click', function (e) {
+		e.preventDefault();
+		$('.video-block').toggleClass('active');
+		$(this).toggleClass('active');
+	});
 
-	// date end
 
 	// home Top slider
 	var swiper = new Swiper(".homeTopSlide", {
@@ -23,9 +53,6 @@ $(function () {
 		pagination: {
 			el: ".swiper-pagination",
 			// clickable: true,
-		},
-		autoplay: {
-			delay: 3000,
 		},
 		breakpoints: {
 			0: {
@@ -55,14 +82,14 @@ $(function () {
 	var swiper3 = new Swiper(".quality-slide-in", {
 		slidesPerView: 1,
 		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+		},
 		loop: true,
 		speed: 1000,
 		navigation: {
 			nextEl: ".swiper-button-next2",
 			prevEl: ".swiper-button-prev2",
-		},
-		autoplay: {
-			delay: 3000,
 		},
 		pagination: {
 			el: '.swiper-pagination1',
@@ -84,14 +111,13 @@ $(function () {
 	// concert sec
 	try {
 
-		// $('.more-text__btn').click(function() {
-		// 	$('.concert-sec__descr').slideToggle();
-		// 	if ($('.more-text__btn').text() == "Читать далее") {
-		// 	  $(this).text("Читать далее")
-		// 	} else {
-		// 	  $(this).text("Читать далее")
-		// 	}
-		//   });
+		$('.concert-sec__descr p').slice(0, 2).addClass('shown');
+		$('.concert-sec__descr p').not('.shown').hide();
+		$('.more-text__btn').on('click', function () {
+			$('.concert-sec__descr p').not('.shown').toggle(300);
+			$(this).toggleClass('showLess');
+		});
+
 
 		$('.reviews-card__box').slideUp(0);
 		$(".show-more__card").click(function () {
@@ -108,59 +134,14 @@ $(function () {
 		var swiper = new Swiper(".concertVenuesSlider", {
 			slidesPerView: 1.2,
 			spaceBetween: 30,
+			autoplay: {
+				delay: 4000,
+			},
 			loop: true,
 			speed: 500,
-			autoplay: {
-				delay: 3000,
-			},
 			navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
-			},
-			breakpoints: {
-				0: {
-					slidesPerView: 1.1,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 1.2
-				},
-			},
-		});
-		var swiper = new Swiper(".concertVenuesSlider2", {
-			slidesPerView: 1.2,
-			spaceBetween: 30,
-			loop: true,
-			speed: 500,
-			autoplay: {
-				delay: 3000,
-			},
-			navigation: {
-				nextEl: ".swiper-button-next4",
-				prevEl: ".swiper-button-prev4",
-			},
-			breakpoints: {
-				0: {
-					slidesPerView: 1.1,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 1.2
-				},
-			},
-		});
-
-		var swiper = new Swiper(".concertVenuesSlider3", {
-			slidesPerView: 1.2,
-			spaceBetween: 30,
-			loop: true,
-			autoplay: {
-				delay: 3000,
-			},
-			speed: 500,
-			navigation: {
-				nextEl: ".swiper-button-next3",
-				prevEl: ".swiper-button-prev3",
 			},
 			breakpoints: {
 				0: {
@@ -177,46 +158,46 @@ $(function () {
 	}
 
 
-		var concertSwiper = new Swiper(".concert-swiper", {
-			slidesPerView: 2.4,
-			grabCursor: true,
-			spaceBetween: 30,
-			clickable: true,
-			loop: true,
-			autoplay: {
-				delay: 3000,
+	var concertSwiper = new Swiper(".concert-swiper", {
+		slidesPerView: 2.4,
+		grabCursor: true,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 4000,
+		},
+		clickable: true,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1.2,
+				spaceBetween: 15,
 			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
+			430: {
+				slidesPerView: 1.2,
+				spaceBetween: 20,
 			},
-			breakpoints: {
-				0: {
-					slidesPerView: 1.2,
-					spaceBetween: 15,
-				},
-				430: {
-					slidesPerView: 1.2,
-					spaceBetween: 20,
-				},
-				640: {
-					slidesPerView: 2.2,
-					spaceBetween: 20,
-				},
-				768: {
-					slidesPerView: 2.4,
-					spaceBetween: 30,
-				},
+			640: {
+				slidesPerView: 2.2,
+				spaceBetween: 20,
 			},
-		});
+			768: {
+				slidesPerView: 2.4,
+				spaceBetween: 30,
+			},
+		},
+	});
 
-	var concertSwiper2 = new Swiper(".our-comman-swiper", {
+	var concertSwiper2 = new Swiper(".our-comman-swiper ", {
 		slidesPerView: 3.25,
 		speed: 500,
 		spaceBetween: 30,
 		clickable: true,
 		autoplay: {
-			delay: 3000,
+			delay: 4000,
 		},
 		loop: true,
 		navigation: {
@@ -248,7 +229,7 @@ $(function () {
 		grabCursor: true,
 		spaceBetween: 30,
 		autoplay: {
-			delay: 3000,
+			delay: 4000,
 		},
 		clickable: true,
 		loop: true,
@@ -279,10 +260,10 @@ $(function () {
 		slidesPerView: 1.3,
 		grabCursor: true,
 		spaceBetween: 30,
-		clickable: true,
 		autoplay: {
-			delay: 3000,
+			delay: 4000,
 		},
+		clickable: true,
 		loop: true,
 		navigation: {
 			nextEl: ".swiper-button-next4",
@@ -311,10 +292,10 @@ $(function () {
 		slidesPerView: 1.3,
 		grabCursor: true,
 		spaceBetween: 30,
-		clickable: true,
 		autoplay: {
-			delay: 3000,
+			delay: 4000,
 		},
+		clickable: true,
 		loop: true,
 		navigation: {
 			nextEl: ".swiper-button-next5",
@@ -342,13 +323,70 @@ $(function () {
 
 
 	$('input[name="daterange"]').daterangepicker({
-		opens: 'left'
+		opens: 'left',
+		"locale": {
+			"format": "MM/DD/YYYY",
+			"separator": " - ",
+			"applyLabel": "Принять",
+			"cancelLabel": "Отмена",
+			"fromLabel": "From",
+			"toLabel": "To",
+			"customRangeLabel": "Custom",
+			"weekLabel": "W",
+			"daysOfWeek": [
+				"Вс",
+				"Пн",
+				"Вт",
+				"Ср",
+				"Чт",
+				"Пт",
+				"Сб"
+			],
+			"monthNames": [
+				"Январь",
+				"Февраль",
+				"Март",
+				"Апрель",
+				"Май",
+				"Июнь",
+				"Июль",
+				"Август",
+				"Сентябрь",
+				"Октябрь",
+				"Ноябрь",
+				"Декабрь"
+			],
+			"firstDay": 1
+		},
+		"startDate": "05/15/2023",
+		// "endDate": "05/21/2023",
+		"buttonClasses": "buttons",
+		"applyButtonClasses": "Принять",
+		"cancelClass": "Отмена"
 	}, function (start, end, label) {
-		console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+		console.log("A new date selection was made: " + start.format('DD') + ' to ' + end.format('DD MM'));
 	});
 	$('input[name="daterange"]').val('');
 
-	AOS.init();
 
-	
+});
+
+
+const video = document.getElementById("video");
+const circlePlayButton = document.getElementById("circle-play-b");
+
+function togglePlay() {
+	if (video.paused || video.ended) {
+		video.play();
+	} else {
+		video.pause();
+	}
+}
+
+circlePlayButton.addEventListener("click", togglePlay);
+video.addEventListener("playing", function () {
+	circlePlayButton.style.opacity = 1;
+});
+video.addEventListener("pause", function () {
+	circlePlayButton.style.opacity = 1;
 });
